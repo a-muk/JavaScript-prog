@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    function palindrome(){
+        var x=document.getElementById("name").value;
+        var y= x.length;
+        for (var i=0; i<=y/2; i++){
+            if (x[i]===x[y-1-i]){
+                document.getElementById("result").innerHTML="It is a palindrome";
+            }
+            else{
+                document.getElementById("result").innerHTML="It is not a palindrome";
+
+            }
+        }
+
+    }
+
+</script>
+<body>
+    <p>Check whether a text or a string is a palindrome</p>
+    <input type="text" id="name">
+    <button onclick="palindrome()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
